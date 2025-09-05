@@ -5,6 +5,9 @@ public class MarRover {
     public static final String WEST = "W";
     public static final String EAST = "E";
     public static final String SOUTH = "S";
+    public static final String MOVE = "M";
+    public static final String TURN_LEFT = "L";
+    public static final String TURN_RIGHT = "R";
     private int x;
     private int y;
     private String direction;
@@ -31,30 +34,30 @@ public class MarRover {
         switch (direction) {
             case NORTH -> {
                 switch (command) {
-                    case "M" -> y++;
-                    case "L" -> direction = WEST;
-                    case "R" -> direction = EAST;
+                    case MOVE -> y++;
+                    case TURN_LEFT -> direction = WEST;
+                    case TURN_RIGHT -> direction = EAST;
                 }
             }
             case EAST -> {
                 switch (command) {
-                    case "M" -> x++;
-                    case "L" -> direction = NORTH;
-                    case "R" -> direction = SOUTH;
+                    case MOVE -> x++;
+                    case TURN_LEFT -> direction = NORTH;
+                    case TURN_RIGHT -> direction = SOUTH;
                 }
             }
             case SOUTH -> {
                 switch (command) {
-                    case "M" -> y--;
-                    case "L" -> direction = EAST;
-                    case "R" -> direction = WEST;
+                    case MOVE -> y--;
+                    case TURN_LEFT -> direction = EAST;
+                    case TURN_RIGHT -> direction = WEST;
                 }
             }
             case WEST -> {
                 switch (command) {
-                    case "M" -> x--;
-                    case "L" -> direction = SOUTH;
-                    case "R" -> direction = NORTH;
+                    case MOVE -> x--;
+                    case TURN_LEFT -> direction = SOUTH;
+                    case TURN_RIGHT -> direction = NORTH;
                 }
             }
         }
