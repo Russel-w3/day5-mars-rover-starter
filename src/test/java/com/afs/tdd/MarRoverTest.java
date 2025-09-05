@@ -47,5 +47,17 @@ class MarRoverTest {
         assertEquals("E", marRover.getDirection());
     }
 
-
+    @Test
+    public void should_report_10E_when_input_00E_with_M() {
+        //Given
+        int x = 0, y = 0;
+        String direction = "E", command = "M";
+        MarRover marRover = new MarRover(x, y, direction);
+        //When
+        marRover.report(command);
+        //Then
+        assertEquals(1, marRover.getX());
+        assertEquals(0, marRover.getY());
+        assertEquals(direction, marRover.getDirection());
+    }
 }
