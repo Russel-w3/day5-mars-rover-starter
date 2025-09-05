@@ -1,6 +1,10 @@
 package com.afs.tdd;
 
 public class MarRover {
+    public static final String NORTH = "N";
+    public static final String WEST = "W";
+    public static final String EAST = "E";
+    public static final String SOUTH = "S";
     private int x;
     private int y;
     private String direction;
@@ -25,32 +29,32 @@ public class MarRover {
 
     public void report(String command) {
         switch (direction) {
-            case "N" -> {
+            case NORTH -> {
                 switch (command) {
                     case "M" -> y++;
-                    case "L" -> direction = "W";
-                    case "R" -> direction = "E";
+                    case "L" -> direction = WEST;
+                    case "R" -> direction = EAST;
                 }
             }
-            case "E" -> {
+            case EAST -> {
                 switch (command) {
                     case "M" -> x++;
-                    case "L" -> direction = "N";
-                    case "R" -> direction = "S";
+                    case "L" -> direction = NORTH;
+                    case "R" -> direction = SOUTH;
                 }
             }
-            case "S" -> {
+            case SOUTH -> {
                 switch (command) {
                     case "M" -> y--;
-                    case "L" -> direction = "E";
-                    case "R" -> direction = "W";
+                    case "L" -> direction = EAST;
+                    case "R" -> direction = WEST;
                 }
             }
-            case "W" -> {
+            case WEST -> {
                 switch (command) {
                     case "M" -> x--;
-                    case "L" -> direction = "S";
-                    case "R" -> direction = "N";
+                    case "L" -> direction = SOUTH;
+                    case "R" -> direction = NORTH;
                 }
             }
         }
