@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class DemoTest {
+class MarRoverTest {
     @Test
     public void should_report_01N_when_input_00N_with_M(){
         //Given
