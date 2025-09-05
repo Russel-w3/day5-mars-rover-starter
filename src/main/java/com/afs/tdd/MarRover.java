@@ -28,6 +28,9 @@ public class MarRover {
             if(command.equals("M")){
                 y++;
             }
+            if(command.equals("L")){
+                direction = "W";
+            }
         }
     }
 }

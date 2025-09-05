@@ -18,5 +18,18 @@ class DemoTest {
         assertEquals(1,marRover.getY());
         assertEquals(direction,marRover.getDirection());
     }
-    
+
+    @Test
+    public void should_report_00W_when_input_00N_with_L(){
+        //Given
+        int x = 0,y = 0;
+        String direction = "N",command = "L";
+        MarRover marRover = new MarRover(x, y, direction);
+        //When
+        marRover.report(command);
+        //Then
+        assertEquals(0,marRover.getX());
+        assertEquals(0,marRover.getY());
+        assertEquals("W",marRover.getDirection());
+    }
 }
