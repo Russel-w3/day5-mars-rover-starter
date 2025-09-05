@@ -1,6 +1,6 @@
 package com.afs.tdd;
 
-public class MarRover {
+public class MarsRover {
     public static final String NORTH = "N";
     public static final String WEST = "W";
     public static final String EAST = "E";
@@ -12,7 +12,7 @@ public class MarRover {
     private int y;
     private String direction;
 
-    public MarRover(int x, int y, String direction) {
+    public MarsRover(int x, int y, String direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
