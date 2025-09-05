@@ -34,7 +34,7 @@ class MarRoverTest {
     }
 
     @Test
-    public void should_report_00W_when_input_00N_with_R() {
+    public void should_report_00E_when_input_00N_with_R() {
         //Given
         int x = 0, y = 0;
         String direction = "N", command = "R";
@@ -46,5 +46,6 @@ class MarRoverTest {
         assertEquals(0, marRover.getY());
         assertEquals("E", marRover.getDirection());
     }
+
 
 }
