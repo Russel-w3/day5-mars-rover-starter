@@ -185,7 +185,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_01N_when_input_11E_with_MOVE_BACKWARD() {
+    public void should_report_01E_when_input_11E_with_MOVE_BACKWARD() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, EAST);
