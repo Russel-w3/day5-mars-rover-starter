@@ -210,5 +210,18 @@ class MarsRoverTest {
         assertEquals(SOUTH, marsRover.getDirection());
     }
 
+    @Test
+    public void should_report_10W_when_input_00W_with_B() {
+        //Given
+        int x = 0, y = 0;
+        MarsRover marsRover = new MarsRover(x, y, WEST);
+        //When
+        marsRover.reportLocation(MOVE_BACKWARD);
+        //Then
+        assertEquals(1, marsRover.getX());
+        assertEquals(0, marsRover.getY());
+        assertEquals(WEST, marsRover.getDirection());
+    }
+
 
 }
