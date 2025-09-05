@@ -28,8 +28,11 @@ public class MarRover {
             if(command.equals("M")){
                 y++;
             }
-            if(command.equals("L")){
+            else if(command.equals("L")){
                 direction = "W";
+            }
+            else if(command.equals("R")){
+                direction = "E";
             }
         }
     }
