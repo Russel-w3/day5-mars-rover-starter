@@ -196,4 +196,19 @@ class MarsRoverTest {
         assertEquals(1, marsRover.getY());
         assertEquals(EAST, marsRover.getDirection());
     }
+
+    @Test
+    public void should_report_01S_when_input_00S_with_B() {
+        //Given
+        int x = 0, y = 0;
+        MarsRover marsRover = new MarsRover(x, y, SOUTH);
+        //When
+        marsRover.reportLocation(MOVE_BACKWARD);
+        //Then
+        assertEquals(0, marsRover.getX());
+        assertEquals(1, marsRover.getY());
+        assertEquals(SOUTH, marsRover.getDirection());
+    }
+
+
 }

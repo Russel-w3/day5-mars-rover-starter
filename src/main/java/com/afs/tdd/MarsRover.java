@@ -52,6 +52,7 @@ public class MarsRover {
             case SOUTH -> {
                 switch (command) {
                     case MOVE_FORWARD -> y--;
+                    case MOVE_BACKWARD -> y++;
                     case TURN_LEFT -> direction = EAST;
                     case TURN_RIGHT -> direction = WEST;
                 }
