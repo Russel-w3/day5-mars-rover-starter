@@ -8,6 +8,7 @@ class MarsRoverTest {
 
     public static final String NORTH = "N";
     public static final String MOVE_FORWARD = "M";
+    public static final String MOVE_BACKWARD = "B";
     public static final String TURN_LEFT = "L";
     public static final String TURN_RIGHT = "R";
     public static final String WEST = "W";
@@ -18,10 +19,10 @@ class MarsRoverTest {
     public void should_report_01N_when_input_00N_with_M() {
         //Given
         int x = 0, y = 0;
-        String direction = NORTH, command = MOVE_FORWARD;
+        String direction = NORTH;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(MOVE_FORWARD);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -32,10 +33,10 @@ class MarsRoverTest {
     public void should_report_00W_when_input_00N_with_L() {
         //Given
         int x = 0, y = 0;
-        String direction = NORTH, command = TURN_LEFT;
+        String direction = NORTH;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_LEFT);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -46,10 +47,10 @@ class MarsRoverTest {
     public void should_report_00E_when_input_00N_with_R() {
         //Given
         int x = 0, y = 0;
-        String direction = NORTH, command = TURN_RIGHT;
+        String direction = NORTH;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_RIGHT);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -60,10 +61,10 @@ class MarsRoverTest {
     public void should_report_10E_when_input_00E_with_M() {
         //Given
         int x = 0, y = 0;
-        String direction = EAST, command = MOVE_FORWARD;
+        String direction = EAST;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(MOVE_FORWARD);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -74,10 +75,10 @@ class MarsRoverTest {
     public void should_report_00N_when_input_00E_with_L() {
         //Given
         int x = 0, y = 0;
-        String direction = EAST, command = TURN_LEFT;
+        String direction = EAST;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_LEFT);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -88,10 +89,10 @@ class MarsRoverTest {
     public void should_report_00S_when_input_00E_with_R() {
         //Given
         int x = 0, y = 0;
-        String direction = EAST, command = TURN_RIGHT;
+        String direction = EAST;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_RIGHT);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -102,10 +103,10 @@ class MarsRoverTest {
     public void should_report_10S_when_input_11S_with_M() {
         //Given
         int x = 1, y = 1;
-        String direction = SOUTH, command = MOVE_FORWARD;
+        String direction = SOUTH;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(MOVE_FORWARD);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -116,10 +117,10 @@ class MarsRoverTest {
     public void should_report_11E_when_input_11S_with_L() {
         //Given
         int x = 1, y = 1;
-        String direction = SOUTH, command = TURN_LEFT;
+        String direction = SOUTH;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_LEFT);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -130,10 +131,10 @@ class MarsRoverTest {
     public void should_report_11W_when_input_11S_with_R() {
         //Given
         int x = 1, y = 1;
-        String direction = SOUTH, command = TURN_RIGHT;
+        String direction = SOUTH;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_RIGHT);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -144,10 +145,10 @@ class MarsRoverTest {
     public void should_report_01W_when_input_11W_with_M() {
         //Given
         int x = 1, y = 1;
-        String direction = WEST, command = MOVE_FORWARD;
+        String direction = WEST;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(MOVE_FORWARD);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -158,10 +159,10 @@ class MarsRoverTest {
     public void should_report_11S_when_input_11W_with_L() {
         //Given
         int x = 1, y = 1;
-        String direction = WEST, command = TURN_LEFT;
+        String direction = WEST;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_LEFT);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -172,13 +173,15 @@ class MarsRoverTest {
     public void should_report_11N_when_input_11W_with_R() {
         //Given
         int x = 1, y = 1;
-        String direction = WEST, command = TURN_RIGHT;
+        String direction = WEST;
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.reportLocation(command);
+        marsRover.reportLocation(TURN_RIGHT);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
         assertEquals(NORTH, marsRover.getDirection());
     }
+
+
 }
