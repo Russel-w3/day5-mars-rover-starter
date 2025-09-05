@@ -30,7 +30,7 @@ public class MarsRover {
         return y;
     }
 
-    public void report(String command) {
+    public void reportLocation(String command) {
         switch (direction) {
             case NORTH -> {
                 switch (command) {

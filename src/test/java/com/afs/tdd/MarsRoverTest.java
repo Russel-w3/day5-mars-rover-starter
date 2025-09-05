@@ -12,7 +12,7 @@ class MarsRoverTest {
         String direction = "N", command = "M";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -26,7 +26,7 @@ class MarsRoverTest {
         String direction = "N", command = "L";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -40,7 +40,7 @@ class MarsRoverTest {
         String direction = "N", command = "R";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -54,7 +54,7 @@ class MarsRoverTest {
         String direction = "E", command = "M";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -68,7 +68,7 @@ class MarsRoverTest {
         String direction = "E", command = "L";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -82,7 +82,7 @@ class MarsRoverTest {
         String direction = "E", command = "R";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -96,7 +96,7 @@ class MarsRoverTest {
         String direction = "S", command = "M";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(0, marsRover.getY());
@@ -110,7 +110,7 @@ class MarsRoverTest {
         String direction = "S", command = "L";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -124,7 +124,7 @@ class MarsRoverTest {
         String direction = "S", command = "R";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -138,7 +138,7 @@ class MarsRoverTest {
         String direction = "W", command = "M";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(0, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -152,7 +152,7 @@ class MarsRoverTest {
         String direction = "W", command = "L";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -166,7 +166,7 @@ class MarsRoverTest {
         String direction = "W", command = "R";
         MarsRover marsRover = new MarsRover(x, y, direction);
         //When
-        marsRover.report(command);
+        marsRover.reportLocation(command);
         //Then
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
