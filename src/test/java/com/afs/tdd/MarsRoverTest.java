@@ -16,7 +16,7 @@ class MarsRoverTest {
     public static final String SOUTH = "S";
 
     @Test
-    public void should_report_01N_when_input_00N_with_M() {
+    public void should_report_01N_when_input_00N_with_MOVE_FORWARD() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, NORTH);
@@ -29,7 +29,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_00W_when_input_00N_with_L() {
+    public void should_report_00W_when_input_00N_with_TURN_LEFT() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, NORTH);
@@ -42,7 +42,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_00E_when_input_00N_with_R() {
+    public void should_report_00E_when_input_00N_with_TURN_RIGHT() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, NORTH);
@@ -55,7 +55,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_10E_when_input_00E_with_M() {
+    public void should_report_10E_when_input_00E_with_MOVE_FORWARD() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, EAST);
@@ -68,7 +68,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_00N_when_input_00E_with_L() {
+    public void should_report_00N_when_input_00E_with_TURN_LEFT() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, EAST);
@@ -81,7 +81,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_00S_when_input_00E_with_R() {
+    public void should_report_00S_when_input_00E_with_TURN_RIGHT() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, EAST);
@@ -94,7 +94,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_10S_when_input_11S_with_M() {
+    public void should_report_10S_when_input_11S_with_MOVE_FORWARD() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, SOUTH);
@@ -107,7 +107,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_11E_when_input_11S_with_L() {
+    public void should_report_11E_when_input_11S_with_TURN_LEFT() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, SOUTH);
@@ -120,7 +120,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_11W_when_input_11S_with_R() {
+    public void should_report_11W_when_input_11S_with_TURN_RIGHT() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, SOUTH);
@@ -133,7 +133,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_01W_when_input_11W_with_M() {
+    public void should_report_01W_when_input_11W_with_MOVE_FORWARD() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, WEST);
@@ -146,7 +146,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_11S_when_input_11W_with_L() {
+    public void should_report_11S_when_input_11W_with_TURN_LEFT() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, WEST);
@@ -159,7 +159,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_11N_when_input_11W_with_R() {
+    public void should_report_11N_when_input_11W_with_TURN_RIGHT() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, WEST);
@@ -172,7 +172,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_10N_when_input_11N_with_B() {
+    public void should_report_10N_when_input_11N_with_MOVE_BACKWARD() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, NORTH);
@@ -185,7 +185,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_01N_when_input_11E_with_B() {
+    public void should_report_01N_when_input_11E_with_MOVE_BACKWARD() {
         //Given
         int x = 1, y = 1;
         MarsRover marsRover = new MarsRover(x, y, EAST);
@@ -198,7 +198,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_01S_when_input_00S_with_B() {
+    public void should_report_01S_when_input_00S_with_MOVE_BACKWARD() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, SOUTH);
@@ -211,7 +211,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_10W_when_input_00W_with_B() {
+    public void should_report_10W_when_input_00W_with_MOVE_BACKWARD() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, WEST);
