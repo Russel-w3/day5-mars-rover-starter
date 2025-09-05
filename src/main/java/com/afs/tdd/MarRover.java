@@ -24,48 +24,34 @@ public class MarRover {
     }
 
     public void report(String command) {
-        if(direction.equals("N")){
-            if(command.equals("M")){
-                y++;
+        switch (direction) {
+            case "N" -> {
+                switch (command) {
+                    case "M" -> y++;
+                    case "L" -> direction = "W";
+                    case "R" -> direction = "E";
+                }
             }
-            else if(command.equals("L")){
-                direction = "W";
+            case "E" -> {
+                switch (command) {
+                    case "M" -> x++;
+                    case "L" -> direction = "N";
+                    case "R" -> direction = "S";
+                }
             }
-            else if(command.equals("R")){
-                direction = "E";
+            case "S" -> {
+                switch (command) {
+                    case "M" -> y--;
+                    case "L" -> direction = "E";
+                    case "R" -> direction = "W";
+                }
             }
-        }
-        else if(direction.equals("E")){
-            if(command.equals("M")){
-                x++;
-            }
-            else if(command.equals("L")){
-                direction = "N";
-            }
-            else if(command.equals("R")){
-                direction = "S";
-            }
-        }
-        else if(direction.equals("S")){
-            if(command.equals("M")){
-                y--;
-            }
-            else if(command.equals("L")){
-                direction = "E";
-            }
-            else if(command.equals("R")){
-                direction = "W";
-            }
-        }
-        else if(direction.equals("W")){
-            if(command.equals("M")){
-                x--;
-            }
-            else if(command.equals("L")){
-                direction = "S";
-            }
-            else if(command.equals("R")){
-                direction = "N";
+            case "W" -> {
+                switch (command) {
+                    case "M" -> x--;
+                    case "L" -> direction = "S";
+                    case "R" -> direction = "N";
+                }
             }
         }
     }
