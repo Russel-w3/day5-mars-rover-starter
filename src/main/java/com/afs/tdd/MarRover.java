@@ -64,6 +64,9 @@ public class MarRover {
             else if(command.equals("L")){
                 direction = "S";
             }
+            else if(command.equals("R")){
+                direction = "N";
+            }
         }
     }
 }
