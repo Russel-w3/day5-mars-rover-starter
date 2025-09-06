@@ -34,37 +34,37 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        switch (direction) {
-            case NORTH -> {
-                switch (command) {
-                    case MOVE_FORWARD -> y++;
-                    case MOVE_BACKWARD -> y--;
-                    case TURN_LEFT -> direction = WEST;
-                    case TURN_RIGHT -> direction = EAST;
+        switch (command) {
+            case MOVE_FORWARD -> {
+                switch (direction) {
+                    case NORTH -> y++;
+                    case SOUTH -> y--;
+                    case EAST -> x++;
+                    case WEST -> x--;
                 }
             }
-            case EAST -> {
-                switch (command) {
-                    case MOVE_FORWARD -> x++;
-                    case MOVE_BACKWARD -> x--;
-                    case TURN_LEFT -> direction = NORTH;
-                    case TURN_RIGHT -> direction = SOUTH;
+            case MOVE_BACKWARD -> {
+                switch (direction) {
+                    case NORTH -> y--;
+                    case SOUTH -> y++;
+                    case EAST -> x--;
+                    case WEST -> x++;
                 }
             }
-            case SOUTH -> {
-                switch (command) {
-                    case MOVE_FORWARD -> y--;
-                    case MOVE_BACKWARD -> y++;
-                    case TURN_LEFT -> direction = EAST;
-                    case TURN_RIGHT -> direction = WEST;
+            case TURN_LEFT -> {
+                switch (direction) {
+                    case NORTH -> direction = WEST;
+                    case SOUTH -> direction = EAST;
+                    case EAST -> direction = NORTH;
+                    case WEST -> direction = SOUTH;
                 }
             }
-            case WEST -> {
-                switch (command) {
-                    case MOVE_FORWARD -> x--;
-                    case MOVE_BACKWARD -> x++;
-                    case TURN_LEFT -> direction = SOUTH;
-                    case TURN_RIGHT -> direction = NORTH;
+            case TURN_RIGHT -> {
+                switch (direction) {
+                    case NORTH -> direction = EAST;
+                    case SOUTH -> direction = WEST;
+                    case EAST -> direction = SOUTH;
+                    case WEST -> direction = NORTH;
                 }
             }
         }
