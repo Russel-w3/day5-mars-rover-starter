@@ -71,8 +71,6 @@ public class MarsRover {
     }
 
     public void reportAfterMultipleCommands(List<String> commandList) {
-        for(String command : commandList) {
-            executeCommand(command);
-        }
+        commandList.forEach(command -> executeCommand(command));
     }
 }
