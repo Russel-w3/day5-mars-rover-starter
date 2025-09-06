@@ -239,4 +239,18 @@ class MarsRoverTest {
         assertEquals(1, marsRover.getY());
         assertEquals(EAST, marsRover.getDirection());
     }
+
+    @Test
+    public void should_report_11E_when_input_00N_with_three_command() {
+        //Given
+        int x = 0, y = 0;
+        MarsRover marsRover = new MarsRover(x, y, NORTH);
+        List<String> commandList = Arrays.asList(MOVE_FORWARD, TURN_RIGHT, MOVE_FORWARD);
+        //When
+        marsRover.reportAfterMultipleCommands(commandList);
+        //Then
+        assertEquals(1, marsRover.getX());
+        assertEquals(1, marsRover.getY());
+        assertEquals(EAST, marsRover.getDirection());
+    }
 }
