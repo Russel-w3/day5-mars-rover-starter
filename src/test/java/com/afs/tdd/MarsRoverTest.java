@@ -227,7 +227,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_report_01E_when_input_00N_with_two_command(){
+    public void should_report_01E_when_input_00N_with_two_command() {
         //Given
         int x = 0, y = 0;
         MarsRover marsRover = new MarsRover(x, y, NORTH);
