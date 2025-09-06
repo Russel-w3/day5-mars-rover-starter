@@ -2,6 +2,10 @@ package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
@@ -223,5 +227,17 @@ class MarsRoverTest {
         assertEquals(WEST, marsRover.getDirection());
     }
 
-
+    @Test
+    public void should_report_01E_when_input_00N_with_two_command(){
+        //Given
+        int x = 0, y = 0;
+        MarsRover marsRover = new MarsRover(x, y, NORTH);
+        List<String> commandList = Arrays.asList(MOVE_FORWARD, TURN_RIGHT);
+        //When
+        marsRover.reportAfterMultipleCommands(commandList);
+        //Then
+        assertEquals(0, marsRover.getX());
+        assertEquals(1, marsRover.getY());
+        assertEquals(EAST, marsRover.getDirection());
+    }
 }

@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.List;
+
 public class MarsRover {
     public static final String NORTH = "N";
     public static final String WEST = "W";
@@ -65,6 +67,12 @@ public class MarsRover {
                     case TURN_RIGHT -> direction = NORTH;
                 }
             }
+        }
+    }
+
+    public void reportAfterMultipleCommands(List<String> commandList) {
+        for(String command : commandList) {
+            reportLocation(command);
         }
     }
 }
